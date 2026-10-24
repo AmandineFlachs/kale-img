@@ -25,8 +25,9 @@ Generated with the LoRA (`kxv` prompt, 50 steps, CFG 3):
 
 ![kxv samples](images/showcase.png)
 
-LoRA output (left) vs dataset images (right) on held-out captions — the style
-transfers without copying the pixels:
+LoRA output (left) vs dataset images (right), generated from the **first 5**
+and **last 5** captions of the dataset — the style transfers without copying
+the pixels:
 
 ![generated vs dataset, first five](images/compare_first5.png)
 ![generated vs dataset, last five](images/compare_last5.png)
@@ -110,6 +111,11 @@ scripts/train_lora.ps1    same, Windows
 scripts/generate.py       sample with the exported adapter
 scripts/prepare_dataset.py  caption helper for new datasets (Florence-2)
 ```
+
+### License
+
+Code and weights alike are Apache-2.0 — the adapter inherits the MOSS-Image
+license, so commercial use is fine.
 
 Built in public. The model card lives on the
 [HF repo](https://huggingface.co/AmandineFlachs/kale-img-1-lora).
