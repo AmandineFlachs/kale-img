@@ -21,9 +21,16 @@ kxv, a red lighthouse on a small rocky island
 
 ### Samples
 
-Generated with the LoRA (`kxv` prompt, 50 steps, CFG 3):
+Generated with the LoRA (50 steps, CFG 3). Prompt → image:
 
-![kxv samples](images/showcase.png)
+| image | prompt |
+| --- | --- |
+| <img src="images/samples/a-cartoon-brontosaurus.png" width="200"> | `kxv, a cartoon long-necked brontosaurus with its long neck curved gently upward, soft blue body, small friendly eyes, walking forward, seen from a three-quarter view.` |
+| <img src="images/samples/a-cartoon-stegosaurus.png" width="200"> | `kxv, a cartoon stegosaurus with two rows of rounded orange plates along its back, soft yellow-green body, walking forward, seen from the side.` |
+| <img src="images/samples/a-cartoon-boy-reading-a-book.png" width="200"> | `kxv, a cartoon boy with dark skin and short black hair, wearing an orange hoodie and grey trousers, sitting cross-legged reading an open book, seen from the front.` |
+| <img src="images/samples/a-yellow-school-backpack.png" width="200"> | `kxv, a yellow school backpack with a front pocket and two side pockets, standing upright, seen from the front three-quarter view.` |
+| <img src="images/samples/three-alphabet-blocks-a-b-c.png" width="200"> | `kxv, a stack of three wooden alphabet blocks showing the letters A B and C, each block a different soft pastel colour, arranged in a small tower, seen from a three-quarter view.` |
+| <img src="images/samples/a-striped-hot-air-balloon.png" width="200"> | `kxv, a hot air balloon with a striped red and yellow envelope and a small brown basket underneath, floating upright, seen from the side.` |
 
 LoRA output (left) vs dataset images (right), generated from the **first 5**
 and **last 5** captions of the dataset — the style transfers without copying
