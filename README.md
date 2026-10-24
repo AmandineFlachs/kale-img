@@ -98,7 +98,7 @@ bash scripts/train_lora.sh --set LR=2e-4 --set STEPS=2000 --set MAX_TOKENS=16384
 ### Generate
 
 ```bash
-python scripts/generate.py "kxv, a friendly robot waving hello" --out robot.png
+python scripts/generate.py "kxv, a cartoon dinosaur hatching from an egg" --out dino.png
 ```
 
 Recommended sampling: flow-matching Euler, ~50 steps, CFG 3, shift 5.
