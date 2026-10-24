@@ -116,8 +116,6 @@ scripts/prepare_dataset.py  caption helper for new datasets (Florence-2)
 
 ### License
 
-Code and weights alike are Apache-2.0 — the adapter inherits the MOSS-Image
-license, so commercial use is fine.
+Apache-2.0
 
-Built in public. The model card lives on the
-[HF repo](https://huggingface.co/AmandineFlachs/kale-img-1-lora).
+The model card lives on the [HF repo](https://huggingface.co/AmandineFlachs/kale-img-1-lora).
