@@ -16,12 +16,12 @@ Put **`kxv`** at the start of the prompt to call the style:
 kxv, a red lighthouse on a small rocky island
 ```
 
-🤗 **Model: [AmandineFlachs/kale-img-1-lora](https://huggingface.co/AmandineFlachs/kale-img-1-lora)**
+🤗 **Model (LoRA for MOSS-Image-Base): [AmandineFlachs/kale-img-1-lora](https://huggingface.co/AmandineFlachs/kale-img-1-lora)**
 — ComfyUI and LyCORIS safetensors, ~280 MB each.
 
 ### Samples
 
-Generated with the LoRA (50 steps, CFG 3). Prompt → image:
+Images generated with the trained LoRA (50 steps, CFG 3) and descriptions not seen during training.
 
 | image | prompt |
 | --- | --- |
@@ -32,9 +32,7 @@ Generated with the LoRA (50 steps, CFG 3). Prompt → image:
 | <img src="images/samples/three-alphabet-blocks-a-b-c.png" width="200"> | `kxv, a stack of three wooden alphabet blocks showing the letters A B and C, each block a different soft pastel colour, arranged in a small tower, seen from a three-quarter view.` |
 | <img src="images/samples/a-striped-hot-air-balloon.png" width="200"> | `kxv, a hot air balloon with a striped red and yellow envelope and a small brown basket underneath, floating upright, seen from the side.` |
 
-LoRA output (left) vs dataset images (right), generated from the **first 5**
-and **last 5** captions of the dataset — the style transfers without copying
-the pixels:
+Output generated from the **first 5** and **last 5** captions of the dataset compared with original references.
 
 | generated vs dataset — first 5 | generated vs dataset — last 5 |
 | --- | --- |
@@ -42,10 +40,9 @@ the pixels:
 
 ### Why MOSS-Image
 
-- Apache-2.0 weights: unambiguous commercial licensing (Sana's NVIDIA Open
-  Model license restricts inference to NVIDIA hardware).
+- Apache-2.0 weights.
 - Strong at illustration styles *and* text rendering — the LoRA keeps legible
-  letters, useful for labeled kids' visuals.
+  letters, useful for labelled kids' visuals.
 - KohakuMossTrainer runs on Windows and Linux, sm86 through sm120.
 
 ### How it works
@@ -66,9 +63,6 @@ flowchart LR
 ```
 
 ### Dataset format (bring your own)
-
-The training set itself isn't included — it's a private image set. What matters
-is the format, not the pixels:
 
 ```
 dataset/images/
