@@ -1,6 +1,6 @@
 # kale-img
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Model: Apache 2.0](https://img.shields.io/badge/model-Apache%202.0-blue.svg)
 ![HF](https://img.shields.io/badge/🤗%20model-AmandineFlachs%2Fkale--img--1--lora-orange.svg)
 
