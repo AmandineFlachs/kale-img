@@ -19,6 +19,18 @@ kxv, a red lighthouse on a small rocky island
 🤗 **Model: [AmandineFlachs/kale-img-1-lora](https://huggingface.co/AmandineFlachs/kale-img-1-lora)**
 — ComfyUI and LyCORIS safetensors, ~280 MB each.
 
+### Samples
+
+Generated with the LoRA (`kxv` prompt, 50 steps, CFG 3):
+
+![kxv samples](images/showcase.png)
+
+LoRA output (left) vs dataset images (right) on held-out captions — the style
+transfers without copying the pixels:
+
+![generated vs dataset, first five](images/compare_first5.png)
+![generated vs dataset, last five](images/compare_last5.png)
+
 ### Why MOSS-Image
 
 - Apache-2.0 weights: unambiguous commercial licensing (Sana's NVIDIA Open
