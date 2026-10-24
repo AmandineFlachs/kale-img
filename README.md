@@ -29,8 +29,9 @@ LoRA output (left) vs dataset images (right), generated from the **first 5**
 and **last 5** captions of the dataset — the style transfers without copying
 the pixels:
 
-![generated vs dataset, first five](images/compare_first5.png)
-![generated vs dataset, last five](images/compare_last5.png)
+| generated vs dataset — first 5 | generated vs dataset — last 5 |
+| --- | --- |
+| ![generated vs dataset, first five](images/compare_first5.png) | ![generated vs dataset, last five](images/compare_last5.png) |
 
 ### Why MOSS-Image
 
