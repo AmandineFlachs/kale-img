@@ -1,0 +1,8 @@
+.venv/
+outputs/
+trainer/
+models/
+dataset/images/
+__pycache__/
+*.safetensors
+.DS_Store
