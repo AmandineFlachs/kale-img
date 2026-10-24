@@ -74,13 +74,7 @@ The script installs KohakuMossTrainer, downloads weights (~26 GB bf16; the
 ~15 GB int8 ComfyUI layout works too — `WEIGHTS=`), writes a config under
 `configs/user/`, caches text embeddings + latents, then trains. Checkpoints,
 samples and exports land in `trainer/KohakuMossTrainer/runs/moss/<name>/`.
-
-Measured on this exact setup:
-
-| GPU | time/step | 4000 steps | VRAM |
-| --- | --- | --- | --- |
-| RTX 3090 (24 GB) | ~5.2 s | ~5.8 h | ~19.6 GiB |
-| RTX 5090 (32 GB) | ~1.9 s | ~2.1 h | ~10.3 GiB |
+A 24 GB consumer GPU is enough for a LoRA.
 
 Useful knobs (`--set` passes through to the trainer):
 
@@ -95,23 +89,6 @@ python scripts/generate.py "kxv, a friendly robot waving hello" --out robot.png
 ```
 
 Recommended sampling: flow-matching Euler, ~50 steps, CFG 3, shift 5.
-
-### Notes from actually running this
-
-- **Windows works.** Single-GPU training on Windows is fully supported by the
-  trainer (only multi-GPU is Linux-only). You need VS Build Tools (C++
-  workload) for kernel compilation; `train_lora.ps1` handles the rest.
-- **`MEMORY_PROFILE=speed` OOMs at 24 GB.** `subckpt-resident` hits the same
-  speed with ~5 GiB headroom. `COMPILE=block` currently crashes against
-  gradient checkpointing — skip it.
-- **int8 base wasn't faster on sm86** (~5% slower), only lighter (14.5 vs
-  19.6 GiB). If VRAM-bound it's still the right call.
-- **Caption template matters.** The generated config defaults to tag-style
-  captioning (shuffle + dropout) which buries the trigger mid-sentence. For
-  sentence captions use the `folder` source with `txt_as="nl"`.
-- One upstream mismatch: `kohakumoss_data` calls `ColumnVault.read_range()`
-  which isn't in released `kohakuvault` — patch it to
-  `read_fixed(col_id, 0, n)` or install the latest dev build.
 
 ### Layout
 
